@@ -52,6 +52,10 @@ The following are the sub-packages included in this monorepo:
 
 Each sub-package has its own configuration for `start`, `build`, `test` scripts.
 
+### GitHub Actions
+
+There is an automated pipeline script that tests, builds, and deploys all packages (front-end, back-end, etc.) to AWS
+
 ---
 
 ## Docker Build
@@ -116,8 +120,3 @@ To make it work you need to define these `secrets` and `variables` in you GitHub
 Go to `Repository Settings` → `Secrets and variables` → `Actions` → `New repository secret` and then define the required **secrets** and **variables**. 
 
 _Please check [deploy.yml](.github/workflows/main.yml) for more all variables & secrets!_
-
-
-# Problems
-
-You may have to run `npm install --package-lock-only` in each package separately.
