@@ -1,0 +1,13 @@
+{
+  "execMap": {
+    "ts": "ts-node"
+  },
+  "watch": [
+    "./",
+    "./.env"
+  ],
+  "ext": "ts,env,json,proto,gql",
+  "ignore": [
+    "./dist/"
+  ]
+}

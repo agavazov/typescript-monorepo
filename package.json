@@ -1,0 +1,33 @@
+{
+  "name": "ts-monorepo",
+  "version": "0.0.1",
+  "author": "Alexander Gavazov",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/agavazov/nestjs",
+  "scripts": {
+    "start-api": "npm --prefix packages/api run start",
+    "build-api": "npm --prefix packages/api run build",
+    "test-api": "npm --prefix packages/api run test",
+    "start-client": "npm --prefix packages/client run start",
+    "build-client": "npm --prefix packages/client run build",
+    "test-client": "npm --prefix packages/client run test",
+    "start": "concurrently \"npm:start-*\"",
+    "build": "concurrently \"npm:build-*\"",
+    "test": "concurrently \"npm:test-*\"",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts,.js --fix",
+    "postinstall": "lerna bootstrap"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "lerna": "^6.6.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint": "^8.37.0"
+  }
+}

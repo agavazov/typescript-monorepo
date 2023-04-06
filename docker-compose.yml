@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  api:
+    build: packages/api
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    environment:
+      PORT: ${API_PORT}
+    working_dir: /app
+    healthcheck:
+      test: "wget --no-verbose --tries=1 --spider http://127.0.0.1/healthcheck || exit 1"
+      interval: 5s
+      timeout: 2s
+      retries: 5
+    restart: unless-stopped
+
+  client:
+    build: ./packages/client
+    ports:
+      - "${CLIENT_PORT}:80"
+    depends_on:
+      - api
