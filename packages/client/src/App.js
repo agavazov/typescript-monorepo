@@ -16,7 +16,7 @@ function App() {
   return (
     <div className='App'>
       <h1 className='App-title'>Hello World!</h1>
-      <h2 className='App-subTitle'>Simple React App (0.0.3)</h2>
+      <h2 className='App-subTitle'>Simple React App (0.0.4)</h2>
 
       {response && <pre className='App-response'>{response}</pre>}
 
