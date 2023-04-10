@@ -30,6 +30,8 @@ jobs:
 
       # Build all packages
       - name: Build the monorepo
+        env:
+          REACT_APP_API_URL: ${{ vars.API_URL }}
         run: npm run build
 
       # Deploy the client

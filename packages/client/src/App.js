@@ -5,7 +5,7 @@ function App() {
   const [response, setResponse] = useState('');
   const handleClick = async () => {
     try {
-      const response = await fetch(`${process.env.API_URL}/time`);
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/time`);
       const responseText = await response.text();
       setResponse(`The server time is: ${responseText}`);
     } catch (error) {

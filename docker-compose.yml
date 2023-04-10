@@ -19,5 +19,7 @@ services:
     build: ./packages/client
     ports:
       - "${CLIENT_PORT}:80"
+    environment:
+      REACT_APP_API_URL: "http://localhost:${API_PORT}"
     depends_on:
       - api
