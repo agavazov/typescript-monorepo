@@ -119,4 +119,4 @@ To make it work you need to define these `secrets` and `variables` in you GitHub
 
 Go to `Repository Settings` → `Secrets and variables` → `Actions` → `New repository secret` and then define the required **secrets** and **variables**. 
 
-_Please check [deploy.yml](.github/workflows/main.yml) for more all variables & secrets!_
+ _Please check [deploy.yml](.github/workflows/main.yml) for more variables & secrets!_

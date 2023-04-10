@@ -1,10 +1,13 @@
 {
-  "name": "ts-monorepo",
+  "name": "typescript-monorepo",
   "version": "0.0.1",
   "author": "Alexander Gavazov",
   "private": true,
   "license": "MIT",
-  "homepage": "https://github.com/agavazov/nestjs",
+  "homepage": "https://github.com/agavazov/typescript-monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "start-api": "npm --prefix packages/api run start",
     "build-api": "npm --prefix packages/api run build",
