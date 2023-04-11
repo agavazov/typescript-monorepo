@@ -15,7 +15,7 @@ app.all('*', function(req, res, next) {
 app.get('/', (req: Request, res: Response) => {
   res.json({
     package: 'monorepo-example',
-    version: '0.0.5'
+    version: '0.0.6'
   });
 });
 
