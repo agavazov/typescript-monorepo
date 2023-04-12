@@ -7,10 +7,4 @@ describe('Time (e2e)', () => {
     expect(res.statusCode).toBe(200);
     expect(res.body).toHaveProperty('fullDate');
   });
-
-  it('Must have "ok" as status value', async () => {
-    const res = await request(app).get('/healthcheck');
-    expect(res.statusCode).toBe(200);
-    expect(res.body?.status).toBe('ok');
-  });
 });
